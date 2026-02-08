@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Andrew Mirasol - IT Student specializing in web development and system design. View my portfolio, projects, and skills.">
+  <title>Andrew Mirasol | IT Student Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header id="home">
+      <nav aria-label="Main navigation">
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-duotone fa-solid fa-bars"></i>
+        </button>
+        <ul>
+          <li><a href="#home" aria-label="Go to home section">Home</a></li>
+          <li><a href="#about" aria-label="Go to about section">About</a></li>
+          <li><a href="#education" aria-label="Go to education section">Education</a></li>
+          <li><a href="#skills" aria-label="Go to skills section">Skills</a></li>
+          <li><a href="#projects" aria-label="Go to projects section">Projects</a></li>
+          <li><a href="#experience" aria-label="Go to experience section">Experience</a></li>
+          <li><a href="#certifications" aria-label="Go to certifications section">Certifications</a></li>
+        </ul>
+      </nav>
+      <h1>Hello, I'm Andrew.</h1>
+      <div id="typing-text"></div>
+      <p class="tagline">
+        Passionately creating innovative digital experiences, rooted in user needs.
+      </p>
+      <p class="contact">
+        <a href="mailto:venandrewmirasol@gmail.com" class="contact-link">venandrewmirasol@gmail.com</a> • 
+        <a href="tel:+639921497659" class="contact-link">09921497659</a>
+      </p>
+    </header>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+      <h2>About Me</h2>
+  
+      <p>
+        I am a college student currently studying Information Technology.
+        I am interested in web development and system design.
+        I am willing to learn new skills and gain experience through
+        real-world projects and job opportunities.
+      </p>
+
+      <div class="image">
+        <img src="assets/profile.jpg" alt="Profile picture of Andrew Mirasol">
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        <strong>Bachelor of Science in Information Technology</strong><br>
+        Technological Institute of the Philippines - Manila<br>
+        2021 – Present
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skills">
+        <li>HTML, CSS</li>
+        <li>PHP, Python, JavaScript</li>
+        <li>MySQL, PostgreSQL, NoSQL</li>
+        <li>Git & GitHub</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Academic Projects</h2>
+
+      <div class="project">
+        <h3>Student Job Board Web Application</h3>
+        <p>
+          A simple job board system developed as a school project.
+          Includes job posting, job listings, and employer contact.
+        </p>
+        <span>PHP • MySQL • HTML • CSS</span>
+      </div>
+
+      <div class="project">
+        <h3>Django Blog Application</h3>
+        <p>
+          A blog website with post management, tagging, and search features.
+        </p>
+        <span>Django • PostgreSQL</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>
+        Currently building hands-on experience through academic projects
+        and continuously expanding my technical skill set. Actively seeking
+        internship and entry-level opportunities to apply my knowledge in
+        real-world scenarios.
+      </p>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <h2>Certifications & Trainings</h2>
+      <p>
+        Actively pursuing professional certifications to complement my academic learning.
+      </p>
+    </section>
+
+    <footer>
+      <p>References available upon request</p>
+    </footer>
+
+  </div>
+
+  <button id="goUpBtn" aria-label="Go to top">↑</button>
+
+  <!-- Chatbot -->
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>AI Assistant</h2>
+      <button id="closeBtn">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+  <button class="chat-toggle" id="chatToggle">💬</button>
+
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="chatbot.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
