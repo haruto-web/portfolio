@@ -1,144 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Andrew Mirasol - IT Student specializing in web development and system design. View my portfolio, projects, and skills.">
-  <title>Andrew Mirasol | IT Student Portfolio</title>
+  <meta name="description" content="Ven Andrew B. Mirasol - BSIT Student Portfolio">
+  <title>Ven Andrew B. Mirasol | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    #typing-text::after { content:'|'; animation: blink 0.7s infinite; }
+    .section-hidden { opacity:0; transform:translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal { opacity:1 !important; transform:translateY(0) !important; }
+    nav ul.active { left:0 !important; }
+    body.menu-open { margin-left:280px; overflow:hidden; }
+    @media(max-width:768px) { body.menu-open { margin-left:0; } }
+  </style>
 </head>
 
-<body>
+<body class="bg-white text-gray-900 leading-relaxed overflow-x-hidden transition-[margin-left] duration-400">
 
-  <div class="container">
+  <div class="max-w-3xl mx-auto px-10 py-20 max-sm:px-5 max-sm:py-10">
 
-    <header id="home">
-      <nav aria-label="Main navigation">
-        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
-          <i class="fa-duotone fa-solid fa-bars"></i>
-        </button>
-        <ul>
-          <li><a href="#home" aria-label="Go to home section">Home</a></li>
-          <li><a href="#about" aria-label="Go to about section">About</a></li>
-          <li><a href="#education" aria-label="Go to education section">Education</a></li>
-          <li><a href="#skills" aria-label="Go to skills section">Skills</a></li>
-          <li><a href="#projects" aria-label="Go to projects section">Projects</a></li>
-          <li><a href="#experience" aria-label="Go to experience section">Experience</a></li>
-          <li><a href="#certifications" aria-label="Go to certifications section">Certifications</a></li>
-        </ul>
-      </nav>
-      <h1>Hello, I'm Andrew.</h1>
-      <div id="typing-text"></div>
-      <p class="tagline">
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm px-10 py-5 z-50 flex items-center border-b border-gray-200 max-sm:px-5 max-sm:py-3" aria-label="Main navigation">
+      <button class="burger p-2 text-xl text-gray-900 hover:opacity-60 transition-opacity z-[1001]" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-duotone fa-solid fa-bars transition-transform duration-300"></i>
+      </button>
+      <ul class="fixed top-0 -left-[280px] w-[280px] h-screen bg-white flex flex-col items-start pt-24 px-10 border-r border-gray-200 transition-[left] duration-400 list-none max-sm:w-3/4 max-sm:max-w-[300px]">
+        <li class="my-2 w-full"><a href="#home" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Home</a></li>
+        <li class="my-2 w-full"><a href="#about" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">About</a></li>
+        <li class="my-2 w-full"><a href="#skills" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Skills</a></li>
+        <li class="my-2 w-full"><a href="#projects" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Projects</a></li>
+        <li class="my-2 w-full"><a href="#certifications" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Certifications</a></li>
+        <li class="my-2 w-full"><a href="#experience" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Experience</a></li>
+        <li class="my-2 w-full"><a href="#contact" class="block py-2 text-gray-900 hover:opacity-60 transition-opacity">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header id="home" class="min-h-screen flex flex-col justify-center items-start">
+      <img src="assets/ven.jpg" alt="Ven Andrew B. Mirasol" class="w-32 h-32 rounded-full object-cover shadow-lg mb-6">
+      <h1 class="text-5xl font-bold mb-5 tracking-tight max-sm:text-3xl">Hello, I'm Andrew.</h1>
+      <div id="typing-text" class="text-3xl text-gray-500 mb-8 max-sm:text-xl"></div>
+      <p class="text-lg text-gray-500 max-w-xl mb-8 leading-relaxed max-sm:text-base">
         Passionately creating innovative digital experiences, rooted in user needs.
       </p>
-      <p class="contact">
-        <a href="mailto:venandrewmirasol@gmail.com" class="contact-link">venandrewmirasol@gmail.com</a> • 
-        <a href="tel:+639921497659" class="contact-link">09921497659</a>
+      <p class="text-sm text-gray-500">
+        <a href="mailto:venandrewmirasol@gmail.com" class="text-gray-900 hover:opacity-60 transition-opacity">venandrewmirasol@gmail.com</a> &bull;
+        <a href="tel:+639921497659" class="text-gray-900 hover:opacity-60 transition-opacity">09921497659</a>
       </p>
     </header>
 
-    <!-- ABOUT ME -->
-    <section id="about">
-      <h2>About Me</h2>
-  
-      <p>
-        I am a college student currently studying Information Technology.
-        I am interested in web development and system design.
-        I am willing to learn new skills and gain experience through
-        real-world projects and job opportunities.
-      </p>
-
-      <div class="image">
-        <img src="assets/profile.jpg" alt="Profile picture of Andrew Mirasol">
+    <!-- ABOUT -->
+    <section id="about" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <img src="assets/ven.jpg" alt="Ven Andrew B. Mirasol" class="w-40 h-40 rounded-full object-cover shadow-lg flex-shrink-0">
+        <p class="text-gray-500 leading-relaxed">
+          I am a BSIT student who is interested in mobile app development and creating useful applications. I enjoy building apps using Firebase and improving my programming skills. I also have knowledge in web development frameworks.
+        </p>
       </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2>Education</h2>
-      <p>
-        <strong>Bachelor of Science in Information Technology</strong><br>
-        Technological Institute of the Philippines - Manila<br>
-        2021 – Present
-      </p>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="skills">
-        <li>HTML, CSS</li>
-        <li>PHP, Python, JavaScript</li>
-        <li>MySQL, PostgreSQL, NoSQL</li>
-        <li>Git & GitHub</li>
-        <li>Microsoft Office</li>
-      </ul>
+    <section id="skills" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">Skills</h2>
+
+      <div class="mb-6">
+        <h3 class="text-base font-semibold mb-3">Programming:</h3>
+        <ul class="flex flex-wrap gap-3 list-none ml-0">
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Java</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Python</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-base font-semibold mb-3">Frameworks &amp; Technologies:</h3>
+        <ul class="flex flex-wrap gap-3 list-none ml-0">
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Firebase</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Laravel</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Django</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">React</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-base font-semibold mb-3">Tools:</h3>
+        <ul class="flex flex-wrap gap-3 list-none ml-0">
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Android Studio</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Visual Studio Code (VS Code)</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-base font-semibold mb-3">Others:</h3>
+        <ul class="flex flex-wrap gap-3 list-none ml-0">
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Problem-solving</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Teamwork</li>
+          <li class="bg-gray-50 px-4 py-2 rounded-full text-sm border border-gray-200">Communication</li>
+        </ul>
+      </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Academic Projects</h2>
+    <section id="projects" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">Projects</h2>
 
-      <div class="project">
-        <h3>Student Job Board Web Application</h3>
-        <p>
-          A simple job board system developed as a school project.
-          Includes job posting, job listings, and employer contact.
+      <div class="py-8 border-b border-gray-200 mb-8">
+        <h3 class="text-xl font-semibold mb-3">Recipe Mobile App</h3>
+        <p class="text-sm text-gray-500 mb-3">
+          A mobile application where users can post recipes with images and captions. It uses Firebase to store user data, images, and posts.
         </p>
-        <span>PHP • MySQL • HTML • CSS</span>
+        <h4 class="text-sm font-semibold mb-2">Features:</h4>
+        <ul class="list-disc ml-5 text-sm text-gray-500 mb-3">
+          <li>Upload images</li>
+          <li>Add captions and recipe names</li>
+          <li>Favorite/like posts</li>
+          <li>User profile system</li>
+        </ul>
       </div>
 
-      <div class="project">
-        <h3>Django Blog Application</h3>
-        <p>
-          A blog website with post management, tagging, and search features.
+      <div class="py-8 border-b border-gray-200 mb-8">
+        <h3 class="text-xl font-semibold mb-3">JobAI &ndash; AI-Powered Job Platform</h3>
+        <p class="text-sm text-gray-500 mb-3">
+          A full-stack job platform connecting employers and job seekers with an AI-powered admin chat assistant. Features separate portals for employers, job seekers, and administrators.
         </p>
-        <span>Django • PostgreSQL</span>
+        <h4 class="text-sm font-semibold mb-2">Features:</h4>
+        <ul class="list-disc ml-5 text-sm text-gray-500 mb-3">
+          <li>Employer job posting &amp; management</li>
+          <li>Job seeker application system</li>
+          <li>Admin dashboard with AI chat assistant</li>
+          <li>Landing page with role-based routing</li>
+        </ul>
+        <span class="text-xs text-gray-400">PHP (Laravel) &bull; JavaScript &bull; MySQL &bull; AI Integration</span>
       </div>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>
-        Currently building hands-on experience through academic projects
-        and continuously expanding my technical skill set. Actively seeking
-        internship and entry-level opportunities to apply my knowledge in
-        real-world scenarios.
-      </p>
+      <div class="py-8 border-b border-gray-200 mb-8">
+        <h3 class="text-xl font-semibold mb-3">Study-Sync</h3>
+        <p class="text-sm text-gray-500 mb-3">
+          An Android mobile application designed to help students manage their study workflow. It includes task management, analytics, AR flashcards, quiz generation, and module organization, all backed by Firebase and Firestore.
+        </p>
+        <h4 class="text-sm font-semibold mb-2">Features:</h4>
+        <ul class="list-disc ml-5 text-sm text-gray-500 mb-3">
+          <li>Task dialog &amp; management</li>
+          <li>Study analytics dashboard</li>
+          <li>AR flashcards</li>
+          <li>Quiz generation from modules</li>
+          <li>Data gathering &amp; terms and conditions</li>
+        </ul>
+        <span class="text-xs text-gray-400">Java &bull; Android Studio &bull; Firebase &bull; Firestore</span>
+      </div>
+
+      <div class="py-8">
+        <h3 class="text-xl font-semibold mb-3">BrightTrack LMS &ndash; Progress Tracker</h3>
+        <p class="text-sm text-gray-500 mb-3">
+          An LMS with integrated student support monitoring that tracks academic performance, attendance, and wellness to identify at-risk students early. Includes an AI assistant, messaging system, and ML-based analytics.
+        </p>
+        <h4 class="text-sm font-semibold mb-2">Features:</h4>
+        <ul class="list-disc ml-5 text-sm text-gray-500 mb-3">
+          <li>Academic performance &amp; attendance tracking</li>
+          <li>Wellness monitoring system</li>
+          <li>AI assistant with guardrails</li>
+          <li>Messaging between students and staff</li>
+          <li>ML-based at-risk student identification</li>
+        </ul>
+        <span class="text-xs text-gray-400">Python &bull; Django &bull; PostgreSQL &bull; Machine Learning</span>
+      </div>
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <h2>Certifications & Trainings</h2>
-      <p>
-        Actively pursuing professional certifications to complement my academic learning.
+    <section id="certifications" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">Certifications</h2>
+      <p class="text-gray-500">None yet</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">Experience</h2>
+      <p class="text-gray-500">None yet</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 max-sm:py-14 section-hidden">
+      <h2 class="text-3xl font-bold mb-8 max-sm:text-2xl">Contact Information</h2>
+      <p class="text-gray-500">
+        <strong class="text-gray-900">Email:</strong> <a href="mailto:venandrewmirasol@gmail.com" class="text-gray-900 hover:opacity-60 transition-opacity">venandrewmirasol@gmail.com</a><br>
+        <strong class="text-gray-900">GitHub:</strong> <a href="https://github.com/haruto-web" class="text-gray-900 hover:opacity-60 transition-opacity" target="_blank" rel="noopener">github.com/haruto-web</a>
       </p>
     </section>
 
-    <footer>
-      <p>References available upon request</p>
+    <footer class="mt-24 pt-10 text-center text-sm text-gray-400 border-t border-gray-200">
+      <p>&copy; 2025 Ven Andrew B. Mirasol</p>
     </footer>
 
   </div>
 
-  <button id="goUpBtn" aria-label="Go to top">↑</button>
-
-  <!-- Chatbot -->
-  <div class="chat-container">
-    <div class="chat-header">
-      <h2>AI Assistant</h2>
-      <button id="closeBtn">×</button>
-    </div>
-    <div class="chat-messages" id="chatMessages"></div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Type your message...">
-      <button id="sendBtn">Send</button>
-    </div>
-  </div>
-  <button class="chat-toggle" id="chatToggle">💬</button>
+  <!-- GO UP -->
+  <button id="goUpBtn" class="fixed bottom-8 right-8 w-12 h-12 bg-gray-900 text-white rounded-full text-xl cursor-pointer opacity-0 invisible transition-all duration-300 z-50 hover:-translate-y-0.5" aria-label="Go to top">&uarr;</button>
 
   <link rel="stylesheet" href="chatbot.css">
   <script src="chatbot.js"></script>
