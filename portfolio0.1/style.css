@@ -1,8 +1,8 @@
 /* Only custom styles Tailwind can't handle */
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 #typing-text::after { content:'|'; animation: blink 0.7s infinite; }
-.section-hidden { opacity:0; transform:translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal { opacity:1 !important; transform:translateY(0) !important; }
+.section-hidden { opacity:0; transform:translateX(60px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal { opacity:1 !important; transform:translateX(0) !important; }
 nav ul.active { left:0 !important; }
 body.menu-open { margin-left:280px; overflow:hidden; }
 @media(max-width:768px) { body.menu-open { margin-left:0; } }

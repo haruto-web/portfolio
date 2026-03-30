@@ -54,15 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   typeWriter();
 
-  // Scroll reveal
+  // Scroll reveal (both directions)
   const sections = document.querySelectorAll('.section-hidden');
   let ticking = false;
 
   function revealSections() {
     sections.forEach(section => {
-      if (window.pageYOffset > section.offsetTop - window.innerHeight + 100) {
-        section.classList.add('reveal');
-      }
+      const rect = section.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight - 80 && rect.bottom > 80;
+      section.classList.toggle('reveal', inView);
     });
     ticking = false;
   }

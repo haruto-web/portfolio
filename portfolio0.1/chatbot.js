@@ -1,3 +1,4 @@
+const API_KEY = ''; // TODO: Use a backend proxy instead of exposing your API key client-side
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
 const chatContainer = document.querySelector('.chat-container');
@@ -53,7 +54,7 @@ async function sendMessage() {
   showTyping();
 
   try {
-    const response = await fetch(`${API_URL}?key=${AIzaSyDnmd8L1pAbzEBvjVuoU2yem2B4sPiKvgI}`, {
+    const response = await fetch(`${API_URL}?key=${API_KEY}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
