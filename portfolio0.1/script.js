@@ -35,9 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentText = textArray[textIndex];
 
     if (isDeleting) {
-      typingText.textContent = currentText.substring(0, charIndex--);
+      charIndex--;
+      typingText.textContent = currentText.substring(0, charIndex);
     } else {
-      typingText.textContent = currentText.substring(0, charIndex++);
+      charIndex++;
+      typingText.textContent = currentText.substring(0, charIndex);
     }
 
     if (!isDeleting && charIndex === currentText.length) {
