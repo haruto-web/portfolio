@@ -327,8 +327,12 @@ function GitHubActivity() {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch(`https://api.github.com/users/${username}/events/public`, {
-      headers: { Accept: 'application/vnd.github+json' },
+    const loadActivity = () => fetch(`https://api.github.com/users/${username}/events/public?t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'Cache-Control': 'no-cache',
+      },
       signal: controller.signal,
     })
       .then((response) => {
@@ -350,8 +354,12 @@ function GitHubActivity() {
         if (error.name !== 'AbortError') setStatus('error');
       });
 
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=8`, {
-      headers: { Accept: 'application/vnd.github+json' },
+    const loadRepos = () => fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=8&t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'Cache-Control': 'no-cache',
+      },
       signal: controller.signal,
     })
       .then((response) => {
@@ -366,7 +374,18 @@ function GitHubActivity() {
         if (error.name !== 'AbortError') setRepoStatus('error');
       });
 
-    return () => controller.abort();
+    loadActivity();
+    loadRepos();
+
+    const refreshTimer = window.setInterval(() => {
+      loadActivity();
+      loadRepos();
+    }, 60000);
+
+    return () => {
+      controller.abort();
+      window.clearInterval(refreshTimer);
+    };
   }, []);
 
   return (

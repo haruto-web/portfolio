@@ -345,6 +345,9 @@ h2 {
 .game-panel {
   display: grid;
   gap: 18px;
+  justify-items: center;
+  width: min(100%, 880px);
+  margin: 0 auto;
 }
 
 .game-header {
@@ -352,6 +355,7 @@ h2 {
   gap: 16px;
   align-items: center;
   justify-content: space-between;
+  width: min(100%, 560px);
 }
 
 .game-header h3 {
@@ -480,6 +484,7 @@ h2 {
 .game-description {
   margin: 0;
   padding: 14px 16px;
+  width: min(100%, 560px);
   color: #4b5563;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -1003,8 +1008,9 @@ footer {
   }
 
   .game-header {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 
   .snake-board {
