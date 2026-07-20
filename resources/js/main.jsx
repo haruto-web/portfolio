@@ -131,6 +131,7 @@ function SnakeGame() {
   const [score, setScore] = useState(0);
   const [best, setBest] = useState(0);
   const [running, setRunning] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
@@ -154,10 +155,17 @@ function SnakeGame() {
     directionRef.current = { x: 1, y: 0 };
     setScore(0);
     setGameOver(false);
+    setPlaying(true);
     setRunning(true);
   };
 
+  const stopGame = () => {
+    setRunning(false);
+    setPlaying(false);
+  };
+
   const turn = (next) => {
+    if (!playing) return;
     const current = directionRef.current;
     if (current.x + next.x === 0 && current.y + next.y === 0) return;
     directionRef.current = next;
@@ -172,7 +180,7 @@ function SnakeGame() {
 
       const key = event.key.toLowerCase();
       const gameKeys = ['arrowup', 'arrowdown', 'arrowleft', 'arrowright', 'w', 'a', 's', 'd', ' ', 'p', 'r', 'enter'];
-      if (!gameKeys.includes(key)) return;
+      if (!gameKeys.includes(key) || !playing) return;
 
       event.preventDefault();
 
@@ -186,7 +194,7 @@ function SnakeGame() {
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
+  }, [playing]);
 
   useEffect(() => {
     if (!running || gameOver) return undefined;
@@ -250,21 +258,19 @@ function SnakeGame() {
             const isApple = apple.x === x && apple.y === y;
             return <span className={`${isHead ? 'snake-head' : ''} ${isSnake ? 'snake-cell' : ''} ${isApple ? 'apple-cell' : ''}`} key={`${x}-${y}`} />;
           })}
-          {!running && !gameOver && <div className="game-overlay"><Play size={28} /> Press Start</div>}
+          {!playing && !gameOver && <div className="game-overlay"><Play size={28} /> Press Start</div>}
+          {playing && !running && !gameOver && <div className="game-overlay">Paused<br /><small>Press Resume</small></div>}
           {gameOver && <div className="game-overlay">Game Over<br /><small>Press Restart</small></div>}
         </div>
 
         <div className="game-controls">
           <button type="button" onClick={resetGame}>{gameOver ? 'Restart' : 'Start'}</button>
-          <button type="button" onClick={() => setRunning((value) => !value)} disabled={gameOver}>{running ? 'Pause' : 'Resume'}</button>
+          <button type="button" onClick={() => setRunning((value) => !value)} disabled={gameOver || !playing}>{running ? 'Pause' : 'Resume'}</button>
+          <button type="button" onClick={stopGame} disabled={!playing}>Stop Playing</button>
         </div>
-        <div className="direction-pad" aria-label="Game controls">
-          <button type="button" onClick={() => turn({ x: 0, y: -1 })}>Up</button>
-          <button type="button" onClick={() => turn({ x: -1, y: 0 })}>Left</button>
-          <button type="button" onClick={() => turn({ x: 1, y: 0 })}>Right</button>
-          <button type="button" onClick={() => turn({ x: 0, y: 1 })}>Down</button>
-        </div>
-        <p className="game-hint">Use arrow keys or WASD. Space pauses, R restarts.</p>
+        <p className="game-description">
+          Built with React hooks for game state and movement timing, CSS Grid for the board, and browser keyboard events for snake control.
+        </p>
       </div>
     </Section>
   );
@@ -314,7 +320,9 @@ function describeGitHubEvent(event) {
 function GitHubActivity() {
   const username = 'haruto-web';
   const [events, setEvents] = useState([]);
+  const [repos, setRepos] = useState([]);
   const [status, setStatus] = useState('loading');
+  const [repoStatus, setRepoStatus] = useState('loading');
 
   useEffect(() => {
     const controller = new AbortController();
@@ -328,11 +336,34 @@ function GitHubActivity() {
         return response.json();
       })
       .then((data) => {
-        setEvents(Array.isArray(data) ? data.slice(0, 6) : []);
+        const meaningfulEvents = Array.isArray(data)
+          ? data.filter((event) => {
+            const hasCommit = event.type !== 'PushEvent' || (event.payload?.commits?.length ?? 0) > 0;
+            const isBranchCreation = event.type === 'CreateEvent' && event.payload?.ref_type === 'branch';
+            return hasCommit && !isBranchCreation;
+          })
+          : [];
+        setEvents(meaningfulEvents.slice(0, 6));
         setStatus('ready');
       })
       .catch((error) => {
         if (error.name !== 'AbortError') setStatus('error');
+      });
+
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=8`, {
+      headers: { Accept: 'application/vnd.github+json' },
+      signal: controller.signal,
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('GitHub repositories are unavailable right now.');
+        return response.json();
+      })
+      .then((data) => {
+        setRepos(Array.isArray(data) ? data : []);
+        setRepoStatus('ready');
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') setRepoStatus('error');
       });
 
     return () => controller.abort();
@@ -357,6 +388,27 @@ function GitHubActivity() {
             alt={`${username} GitHub contribution graph`}
             loading="lazy"
           />
+        </div>
+
+        <div className="repo-list" aria-live="polite">
+          <div className="repo-list-header">
+            <h3>Latest Repositories</h3>
+            <span>Updates live from GitHub</span>
+          </div>
+          {repoStatus === 'loading' && <p className="activity-state">Loading repositories...</p>}
+          {repoStatus === 'error' && <p className="activity-state">GitHub repositories could not load right now.</p>}
+          {repoStatus === 'ready' && repos.map((repo) => (
+            <a className="repo-item" href={repo.html_url} target="_blank" rel="noreferrer" key={repo.id}>
+              <span>
+                <strong>{repo.name}</strong>
+                <small>{repo.description || 'No description added yet.'}</small>
+              </span>
+              <span className="repo-meta">
+                {repo.language && <em>{repo.language}</em>}
+                <small>Updated {formatEventDate(repo.updated_at)}</small>
+              </span>
+            </a>
+          ))}
         </div>
 
         <div className="activity-timeline" aria-live="polite">
