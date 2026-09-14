@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import '../css/app.css';
 
-const profile = '/assets/ven.jpg';
+const profile = '/assets/Updated_pic.png';
 
 function Nav() {
   const [open, setOpen] = useState(false);
