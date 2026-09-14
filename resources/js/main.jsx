@@ -1,13 +1,21 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
   ArrowUp,
   Bot,
   ChevronDown,
+  Code2,
+  Download,
   ExternalLink,
   Facebook,
+  FileText,
+  FolderOpen,
   Github,
   GitCommit,
+  Info,
   Mail,
   Menu,
   Phone,
@@ -133,6 +141,7 @@ function SnakeGame() {
   const [running, setRunning] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [gameOver, setGameOver] = useState(false);
+  const touchStartRef = useRef(null);
 
   useEffect(() => {
     directionRef.current = direction;
@@ -171,6 +180,29 @@ function SnakeGame() {
     directionRef.current = next;
     setDirection(next);
     setRunning(true);
+  };
+
+  const handleTouchStart = (event) => {
+    const touch = event.changedTouches[0];
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleTouchEnd = (event) => {
+    if (!touchStartRef.current) return;
+
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+    touchStartRef.current = null;
+
+    if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 20) return;
+    event.preventDefault();
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      turn({ x: deltaX > 0 ? 1 : -1, y: 0 });
+    } else {
+      turn({ x: 0, y: deltaY > 0 ? 1 : -1 });
+    }
   };
 
   useEffect(() => {
@@ -249,7 +281,14 @@ function SnakeGame() {
           </div>
         </div>
 
-        <div className="snake-board" role="application" aria-label="Snake game board" tabIndex="0">
+        <div
+          className="snake-board"
+          role="application"
+          aria-label="Snake game board. Swipe to move the snake."
+          tabIndex="0"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {Array.from({ length: size * size }).map((_, index) => {
             const x = index % size;
             const y = Math.floor(index / size);
@@ -263,13 +302,20 @@ function SnakeGame() {
           {gameOver && <div className="game-overlay">Game Over<br /><small>Press Restart</small></div>}
         </div>
 
+        <div className="snake-direction-controls" aria-label="Snake movement controls">
+          <button type="button" aria-label="Move up" onClick={() => turn({ x: 0, y: -1 })} disabled={!playing}><ArrowUp size={20} /></button>
+          <button type="button" aria-label="Move left" onClick={() => turn({ x: -1, y: 0 })} disabled={!playing}><ArrowLeft size={20} /></button>
+          <button type="button" aria-label="Move down" onClick={() => turn({ x: 0, y: 1 })} disabled={!playing}><ArrowDown size={20} /></button>
+          <button type="button" aria-label="Move right" onClick={() => turn({ x: 1, y: 0 })} disabled={!playing}><ArrowRight size={20} /></button>
+        </div>
+
         <div className="game-controls">
           <button type="button" onClick={resetGame}>{gameOver ? 'Restart' : 'Start'}</button>
           <button type="button" onClick={() => setRunning((value) => !value)} disabled={gameOver || !playing}>{running ? 'Pause' : 'Resume'}</button>
           <button type="button" onClick={stopGame} disabled={!playing}>Stop Playing</button>
         </div>
         <p className="game-description">
-          Built with React hooks for game state and movement timing, CSS Grid for the board, and browser keyboard events for snake control.
+          Built with React hooks for game state and movement timing, CSS Grid for the board, and keyboard, swipe, or button controls for movement.
         </p>
       </div>
     </Section>
@@ -451,26 +497,59 @@ function GitHubActivity() {
 
 function Chatbot() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([{ sender: 'bot', text: 'Hello! How can I help you today?' }]);
+  const [messages, setMessages] = useState([{ sender: 'bot', text: 'Hi! I can help you explore Ven Andrew\'s portfolio. Choose a topic below or ask me a question.' }]);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
   const listRef = useRef(null);
   const emailAddress = 'venandrewmirasol@gmail.com';
+  const quickActions = [
+    { id: 'about', label: 'About me', icon: Info, text: 'About me', response: 'Ven Andrew B. Mirasol is a BSIT student passionate about turning ideas into functional apps. He focuses on Android and Firebase development while growing his full-stack skills with Laravel, Django, and React.', target: 'about' },
+    { id: 'skills', label: 'Skills', icon: Code2, text: 'Skills', response: 'His core skills include Java, Python, PHP, JavaScript, SQL, Firebase, Laravel, Django, React, Android Studio, Git, MySQL, and PostgreSQL. He also brings problem-solving, teamwork, and communication skills.', target: 'skills' },
+    { id: 'projects', label: 'Projects', icon: FolderOpen, text: 'Projects', response: 'Featured work includes BrightTrack LMS, JobAI, an AI-based hazard detection system, Study-Sync, and a recipe-sharing mobile app. You can see the project details in the Projects section.', target: 'projects' },
+    { id: 'resume', label: 'Resume', icon: FileText, text: 'Resume', response: 'You can download Ven Andrew\'s resume from the Contact section.', target: 'contact' },
+  ];
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, typing]);
 
-  const sendMessage = async () => {
+  const replyTo = (message) => {
+    const normalized = message.toLowerCase();
+
+    if (/\b(about|who|yourself|background)\b/.test(normalized)) return quickActions[0];
+    if (/\b(skill|technology|technologies|stack|language|framework|tool)\b/.test(normalized)) return quickActions[1];
+    if (/\b(project|work|built|portfolio|app|application)\b/.test(normalized)) return quickActions[2];
+    if (/\b(resume|cv|curriculum)\b/.test(normalized)) return quickActions[3];
+    if (/\b(contact|email|hire|reach|message|phone)\b/.test(normalized)) {
+      return { response: 'You can contact Ven Andrew directly by email at venandrewmirasol@gmail.com, or use the contact button below to open your email app.', target: 'contact' };
+    }
+    if (/\b(hello|hi|hey)\b/.test(normalized)) {
+      return { response: 'Hello! I can tell you about Ven Andrew, his skills, projects, resume, or how to contact him.' };
+    }
+
+    return { response: 'I can help with four things: Ven Andrew\'s background, skills, projects, and resume. You can also use the contact button below to send him a message.' };
+  };
+
+  const showReply = (reply) => {
+    setTyping(true);
+    window.setTimeout(() => {
+      setTyping(false);
+      setMessages((current) => [...current, { sender: 'bot', text: reply.response }]);
+      if (reply.target) document.getElementById(reply.target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 350);
+  };
+
+  const chooseTopic = (action) => {
+    setMessages((current) => [...current, { sender: 'user', text: action.text }]);
+    showReply(action);
+  };
+
+  const sendMessage = () => {
     const value = input.trim();
     if (!value) return;
     setMessages((current) => [...current, { sender: 'user', text: value }]);
     setInput('');
-    setTyping(true);
-    window.setTimeout(() => {
-      setTyping(false);
-      setMessages((current) => [...current, { sender: 'bot', text: 'Thanks for the message. Connect this widget to a Laravel API route when your Gemini key is ready.' }]);
-    }, 700);
+    showReply(replyTo(value));
   };
 
   const contactVen = () => {
@@ -495,7 +574,7 @@ function Chatbot() {
     <>
       <aside className={`chat-container ${open ? 'active' : ''}`} aria-label="AI assistant">
         <header>
-          <h2>AI Assistant</h2>
+          <div><h2>Portfolio Guide</h2><small>Ask about Ven Andrew</small></div>
           <button type="button" aria-label="Close chat" onClick={() => setOpen(false)}><X size={22} /></button>
         </header>
         <div className="chat-messages" ref={listRef}>
@@ -505,6 +584,13 @@ function Chatbot() {
           {typing && <div className="typing">Typing...</div>}
         </div>
         <div className="chat-actions">
+          <p>Explore the portfolio</p>
+          <div className="chat-topic-grid">
+            {quickActions.map((action) => {
+              const Icon = action.icon;
+              return <button type="button" key={action.id} onClick={() => chooseTopic(action)}><Icon size={15} /> {action.label}</button>;
+            })}
+          </div>
           <button type="button" onClick={contactVen}>
             <Mail size={16} /> Contact Ven Andrew Mirasol
           </button>
@@ -553,6 +639,9 @@ function App() {
             <a href="https://github.com/haruto-web" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={20} /></a>
             <a href="tel:+639921497659" aria-label="Phone"><Phone size={20} /></a>
           </div>
+          <a className="resume-link" href="/assets/ven-andrew-mirasol-resume.pdf" download>
+            <Download size={18} /> Download Resume
+          </a>
           <ChevronDown className="down-indicator" size={30} />
         </header>
 
@@ -603,6 +692,9 @@ function App() {
 
         <Section id="contact" title="Let's Connect">
           <p className="lead">Have a project in mind or just want to say hi? Reach out.</p>
+          <a className="resume-link contact-resume-link" href="/assets/ven-andrew-mirasol-resume.pdf" download>
+            <Download size={18} /> Download Resume
+          </a>
           <div className="contact-grid">
             <a href="mailto:venandrewmirasol@gmail.com"><Mail size={24} /><span><small>Email</small>venandrewmirasol@gmail.com</span></a>
             <a href="https://github.com/haruto-web" target="_blank" rel="noreferrer"><Github size={24} /><span><small>GitHub</small>haruto-web</span></a>

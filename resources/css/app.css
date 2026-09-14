@@ -188,6 +188,28 @@ h2 {
   gap: 24px;
 }
 
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 24px;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: #111827;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.resume-link:hover {
+  background: #374151;
+}
+
+.contact-resume-link {
+  margin: 0 0 24px;
+}
+
 .down-indicator {
   position: absolute;
   bottom: 40px;
@@ -397,6 +419,7 @@ h2 {
   border: 1px solid #1f2937;
   border-radius: 8px;
   box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+  touch-action: none;
 }
 
 .snake-board span {
@@ -448,6 +471,49 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.snake-direction-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(2, 44px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.snake-direction-controls button {
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.snake-direction-controls button:first-child {
+  grid-column: 2;
+}
+
+.snake-direction-controls button:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.snake-direction-controls button:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.snake-direction-controls button:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.snake-direction-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .game-controls button {
@@ -849,6 +915,13 @@ footer {
   font-size: 1.05rem;
 }
 
+.chat-container header small {
+  display: block;
+  margin-top: 2px;
+  color: #d1d5db;
+  font-size: 0.72rem;
+}
+
 .chat-container header button,
 .chat-input button {
   display: grid;
@@ -894,6 +967,29 @@ footer {
 
 .chat-actions {
   padding: 0 16px 14px;
+}
+
+.chat-actions > p {
+  margin: 0 0 8px;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chat-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.chat-topic-grid button {
+  width: auto;
+  min-height: 36px;
+  padding: 8px 10px;
+  font-size: 0.8rem;
 }
 
 .chat-actions button {
