@@ -7,6 +7,7 @@ import {
   ArrowUp,
   Bot,
   ChevronDown,
+  ChevronUp,
   Code2,
   Download,
   ExternalLink,
@@ -500,6 +501,7 @@ function Chatbot() {
   const [messages, setMessages] = useState([{ sender: 'bot', text: 'Hi! I can help you explore Ven Andrew\'s portfolio. Choose a topic below or ask me a question.' }]);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
+  const [topicsOpen, setTopicsOpen] = useState(true);
   const listRef = useRef(null);
   const emailAddress = 'venandrewmirasol@gmail.com';
   const quickActions = [
@@ -584,13 +586,16 @@ function Chatbot() {
           {typing && <div className="typing">Typing...</div>}
         </div>
         <div className="chat-actions">
-          <p>Explore the portfolio</p>
-          <div className="chat-topic-grid">
+          <button className="chat-topics-toggle" type="button" aria-expanded={topicsOpen} onClick={() => setTopicsOpen((value) => !value)}>
+            <span>Explore the portfolio</span>
+            {topicsOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          </button>
+          {topicsOpen && <div className="chat-topic-grid">
             {quickActions.map((action) => {
               const Icon = action.icon;
               return <button type="button" key={action.id} onClick={() => chooseTopic(action)}><Icon size={15} /> {action.label}</button>;
             })}
-          </div>
+          </div>}
           <button type="button" onClick={contactVen}>
             <Mail size={16} /> Contact Ven Andrew Mirasol
           </button>

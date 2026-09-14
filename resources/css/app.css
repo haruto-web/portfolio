@@ -1015,6 +1015,26 @@ footer {
   border-color: #d1d5db;
 }
 
+.chat-actions .chat-topics-toggle {
+  justify-content: space-between;
+  min-height: 32px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  color: #6b7280;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chat-actions .chat-topics-toggle:hover {
+  color: #111827;
+  background: transparent;
+  border-color: transparent;
+}
+
 .chat-input {
   display: flex;
   gap: 8px;
