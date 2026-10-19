@@ -662,7 +662,7 @@ function App() {
 
         <Section id="skills" title="Skills">
           <SkillGroup title="Programming:" items={['Java', 'Python', 'PHP', 'JavaScript', 'SQL']} />
-          <SkillGroup title="Frameworks & Technologies:" items={['Firebase', 'Laravel', 'Django', 'React']} />
+          <SkillGroup title="Frameworks & Technologies:" items={['Firebase', 'Laravel', 'Django', 'React', 'AI / ML']} />
           <SkillGroup title="Tools:" items={['Android Studio', 'VS Code', 'Git & GitHub', 'MySQL', 'PostgreSQL']} />
           <SkillGroup title="Soft Skills:" items={['Problem-solving', 'Teamwork', 'Communication']} />
         </Section>
@@ -688,7 +688,7 @@ function App() {
 
         <Section id="education" title="Education">
           <div className="timeline">
-            {['Bachelor of Science in Information Technology|Currently Enrolled|Focused on mobile app development, web technologies, and database management. Building real-world projects using Firebase, Laravel, Django, and React.', 'Senior High School|Tanza National Comprehensive High School - Grade 11-12|', 'Junior High School|Tanza National Comprehensive High School - Grade 7-10|', 'Elementary|Felipe Calderon Elementary School - Grade 1-6|'].map((item) => {
+            {['Bachelor of Science in Information Technology|Currently Enrolled|Focused on software development, mobile and web application design, and database management. Built projects including an AI-powered LMS, job platform, hazard detection system, and mobile productivity apps using Firebase, Laravel, Django, React, and Java.', 'Senior High School|Tanza National Comprehensive High School - Grade 11-12|', 'Junior High School|Tanza National Comprehensive High School - Grade 7-10|', 'Elementary|Felipe Calderon Elementary School - Grade 1-6|'].map((item) => {
               const [title, meta, body] = item.split('|');
               return <div className="timeline-item" key={title}><h3>{title}</h3><p className="muted">{meta}</p>{body && <p>{body}</p>}</div>;
             })}

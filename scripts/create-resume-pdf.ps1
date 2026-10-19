@@ -19,10 +19,10 @@ Add-Text 'venandrewmirasol@gmail.com  |  +63 992 149 7659  |  github.com/haruto-
 
 Add-Text 'ABOUT ME' 50 668 11 $true '0.08 0.37 0.65'
 Add-Rule 50 659 545 659
-Add-Text 'BSIT student and developer focused on building practical mobile and web' 50 641 10
-Add-Text 'applications. Experienced with Android development, Firebase-backed apps,' 50 627 10
-Add-Text 'and full-stack projects using Laravel, Django, React, and relational databases.' 50 613 10
-Add-Text 'Proficient with VS Code and quick to adapt to current technologies.' 50 599 10
+Add-Text 'BSIT student and aspiring developer focused on software development,' 50 641 10
+Add-Text 'mobile and web application design, and database management.' 50 627 10
+Add-Text 'Built projects using Firebase, Laravel, Django, React, and Java.' 50 613 10
+Add-Text 'Eager to learn, adapt, and contribute to real-world tech solutions.' 50 599 10
 
 Add-Text 'SKILLS' 50 574 11 $true '0.08 0.37 0.65'
 Add-Rule 50 565 190 565
@@ -31,18 +31,11 @@ Add-Text 'Java, Python, PHP,' 50 533 9
 Add-Text 'JavaScript, SQL' 50 521 9
 Add-Text 'FRAMEWORKS' 50 495 9 $true
 Add-Text 'Firebase, Laravel,' 50 481 9
-Add-Text 'Django, React' 50 469 9
+Add-Text 'Django, React, AI/ML' 50 469 9
 Add-Text 'TOOLS & DATABASES' 50 443 9 $true
 Add-Text 'Android Studio, VS Code,' 50 429 9
 Add-Text 'Git, GitHub, MySQL,' 50 417 9
 Add-Text 'PostgreSQL, Firestore' 50 405 9
-Add-Text 'CORE STRENGTHS' 50 379 9 $true
-Add-Text 'Problem-solving' 50 365 9
-Add-Text 'Teamwork' 50 353 9
-Add-Text 'Communication' 50 341 9
-Add-Text 'Adaptable to current tech' 50 329 9
-Add-Text 'Continuous learning' 50 317 9
-
 Add-Text 'EDUCATION' 50 291 11 $true '0.08 0.37 0.65'
 Add-Rule 50 282 190 282
 Add-Text 'BACHELOR OF SCIENCE' 50 264 9 $true
@@ -51,32 +44,23 @@ Add-Text 'Currently Enrolled' 50 236 9 $false '0.38 0.43 0.50'
 Add-Text 'Mobile development, web' 50 218 9
 Add-Text 'technologies, databases' 50 206 9
 
-Add-Text 'SELECTED PROJECTS' 225 574 11 $true '0.08 0.37 0.65'
+Add-Text 'EDUCATION & PROJECT EXPERIENCE' 225 574 11 $true '0.08 0.37 0.65'
 Add-Rule 225 565 545 565
-Add-Text 'BRIGHTTRACK LMS' 225 547 10 $true
-Add-Text 'Django  |  PostgreSQL  |  AI/ML' 225 533 9 $false '0.38 0.43 0.50'
-Add-Text '- Learning management system with academic performance,' 225 517 9
-Add-Text '  attendance, wellness monitoring, AI assistance, and analytics.' 225 505 9
+Add-Text 'BSIT STUDENT' 225 547 10 $true
+Add-Text 'Currently Enrolled' 225 533 9 $false '0.38 0.43 0.50'
+Add-Text '- Focused on mobile app development, web' 225 517 9
+Add-Text '  technologies, databases, and project-based learning.' 225 505 9
+Add-Text '- Built systems such as BrightTrack LMS,' 225 489 9
+Add-Text '  JobAI, AI hazard detection, and mobile apps.' 225 477 9
 
-Add-Text 'JOBAI - AI-POWERED JOB PLATFORM' 225 479 10 $true
-Add-Text 'Laravel  |  MySQL  |  JavaScript  |  AI' 225 465 9 $false '0.38 0.43 0.50'
-Add-Text '- Full-stack platform connecting employers and job seekers' 225 449 9
-Add-Text '  through separate portals and an AI admin assistant.' 225 437 9
+Add-Text 'PROJECTS BUILT' 225 451 10 $true
+Add-Text 'Django  |  PostgreSQL  |  AI/ML' 225 437 9 $false '0.38 0.43 0.50'
+Add-Text '- Learning management system with AI support,' 225 421 9
+Add-Text '  analytics, performance, and wellness tracking.' 225 409 9
 
-Add-Text 'AI-BASED HAZARD DETECTION SYSTEM' 225 411 10 $true
-Add-Text 'Django  |  Google Gemini AI' 225 397 9 $false '0.38 0.43 0.50'
-Add-Text '- Analyzes construction images, rates safety hazards, stores' 225 381 9
-Add-Text '  reports, and notifies engineers by email.' 225 369 9
-
-Add-Text 'STUDY-SYNC' 225 343 10 $true
-Add-Text 'Java  |  Android Studio  |  Firebase' 225 329 9 $false '0.38 0.43 0.50'
-Add-Text '- Student productivity app with task management, analytics,' 225 313 9
-Add-Text '  AR flashcards, and quiz generation from modules.' 225 301 9
-
-Add-Text 'RECIPE MOBILE APP' 225 275 10 $true
-Add-Text 'Java  |  Android Studio  |  Firebase' 225 261 9 $false '0.38 0.43 0.50'
-Add-Text '- Recipe-sharing app with profiles, image uploads, captions,' 225 245 9
-Add-Text '  likes, and Firebase-backed data.' 225 233 9
+Add-Text 'Laravel  |  MySQL  |  JavaScript  |  AI' 225 393 9 $false '0.38 0.43 0.50'
+Add-Text '- Full-stack job platform for employers and job seekers' 225 377 9
+Add-Text '  with an AI admin assistant.' 225 365 9
 
 Add-Text 'CONTACT' 225 194 11 $true '0.08 0.37 0.65'
 Add-Rule 225 185 545 185

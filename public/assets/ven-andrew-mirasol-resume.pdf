@@ -15,7 +15,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<< /Length 5492 >>
+<< /Length 4328 >>
 stream
 0.08 0.13 0.22 rg 0 700 595 142 re f
 1 1 1 rg BT /F2 22 Tf 1 0 0 1 50 790 Tm (VEN ANDREW B. MIRASOL) Tj ET
@@ -34,17 +34,11 @@ stream
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 521 Tm (JavaScript, SQL) Tj ET
 0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 495 Tm (FRAMEWORKS) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 481 Tm (Firebase, Laravel,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 469 Tm (Django, React) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 469 Tm (Django, React, AI/ML) Tj ET
 0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 443 Tm (TOOLS & DATABASES) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 429 Tm (Android Studio, VS Code,) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 417 Tm (Git, GitHub, MySQL,) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 405 Tm (PostgreSQL, Firestore) Tj ET
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 379 Tm (CORE STRENGTHS) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 365 Tm (Problem-solving) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 353 Tm (Teamwork) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 341 Tm (Communication) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 329 Tm (Adaptable to current tech) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 317 Tm (Continuous learning) Tj ET
 0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 50 291 Tm (EDUCATION) Tj ET
 0.78 0.82 0.87 RG 0.7 w 50 282 m 190 282 l S
 0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 264 Tm (BACHELOR OF SCIENCE) Tj ET
@@ -52,28 +46,21 @@ stream
 0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 50 236 Tm (Currently Enrolled) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 218 Tm (Mobile development, web) Tj ET
 0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 206 Tm (technologies, databases) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 225 574 Tm (SELECTED PROJECTS) Tj ET
+0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 225 574 Tm (EDUCATION & PROJECT EXPERIENCE) Tj ET
 0.78 0.82 0.87 RG 0.7 w 225 565 m 545 565 l S
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 547 Tm (BRIGHTTRACK LMS) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 533 Tm (Django  |  PostgreSQL  |  AI/ML) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 517 Tm (- Learning management system with academic performance,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 505 Tm (  attendance, wellness monitoring, AI assistance, and analytics.) Tj ET
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 479 Tm (JOBAI - AI-POWERED JOB PLATFORM) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 465 Tm (Laravel  |  MySQL  |  JavaScript  |  AI) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 449 Tm (- Full-stack platform connecting employers and job seekers) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 437 Tm (  through separate portals and an AI admin assistant.) Tj ET
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 411 Tm (AI-BASED HAZARD DETECTION SYSTEM) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 397 Tm (Django  |  Google Gemini AI) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 381 Tm (- Analyzes construction images, rates safety hazards, stores) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 369 Tm (  reports, and notifies engineers by email.) Tj ET
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 343 Tm (STUDY-SYNC) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 329 Tm (Java  |  Android Studio  |  Firebase) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 313 Tm (- Student productivity app with task management, analytics,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 301 Tm (  AR flashcards, and quiz generation from modules.) Tj ET
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 275 Tm (RECIPE MOBILE APP) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 261 Tm (Java  |  Android Studio  |  Firebase) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 245 Tm (- Recipe-sharing app with profiles, image uploads, captions,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 233 Tm (  likes, and Firebase-backed data.) Tj ET
+0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 547 Tm (BSIT STUDENT) Tj ET
+0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 533 Tm (Currently Enrolled) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 517 Tm (- Focused on mobile app development, web) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 505 Tm (  technologies, databases, and project-based learning.) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 489 Tm (- Built systems such as BrightTrack LMS,) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 477 Tm (  JobAI, AI hazard detection, and mobile apps.) Tj ET
+0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 451 Tm (PROJECTS BUILT) Tj ET
+0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 437 Tm (Django  |  PostgreSQL  |  AI/ML) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 421 Tm (- Learning management system with AI support,) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 409 Tm (  analytics, performance, and wellness tracking.) Tj ET
+0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 393 Tm (Laravel  |  MySQL  |  JavaScript  |  AI) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 377 Tm (- Full-stack job platform for employers and job seekers) Tj ET
+0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 365 Tm (  with an AI admin assistant.) Tj ET
 0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 225 194 Tm (CONTACT) Tj ET
 0.78 0.82 0.87 RG 0.7 w 225 185 m 545 185 l S
 0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 225 167 Tm (Email) Tj ET
@@ -98,5 +85,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-5940
+4776
 %%EOF
