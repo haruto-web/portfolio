@@ -57,7 +57,7 @@ function Nav() {
 }
 
 function TypingText() {
-  const words = useMemo(() => ['UX Designer | BSIT Student', 'Mobile & Web Developer', 'Firebase - Laravel - Django - React'], []);
+  const words = useMemo(() => ['Mobile & Web Developer'], []);
   const [text, setText] = useState('');
   const index = useRef(0);
   const char = useRef(0);
@@ -109,7 +109,12 @@ function SkillGroup({ title, items }) {
   );
 }
 
-function ProjectCard({ title, description, note, tags, url, badge }) {
+function ProjectCard({ title, description, note, tags, url, links = [], badge }) {
+  const projectLinks = [
+    ...(url ? [{ url, label: 'Live Demo', note: '(static preview)' }] : []),
+    ...links,
+  ];
+
   return (
     <article className="project-card">
       <div className="project-title-row">
@@ -121,10 +126,14 @@ function ProjectCard({ title, description, note, tags, url, badge }) {
       <div className="tag-row">
         {tags.map((tag) => <span key={tag}>{tag}</span>)}
       </div>
-      {url && (
-        <a className="demo-link" href={url} target="_blank" rel="noreferrer">
-          <ExternalLink size={14} /> Live Demo <small>(static preview)</small>
-        </a>
+      {projectLinks.length > 0 && (
+        <div className="project-links">
+          {projectLinks.map(({ url: linkUrl, label, note: linkNote }) => (
+            <a className="demo-link" href={linkUrl} key={label} target="_blank" rel="noreferrer">
+              <ExternalLink size={14} /> {label} {linkNote && <small>{linkNote}</small>}
+            </a>
+          ))}
+        </div>
       )}
     </article>
   );
@@ -672,13 +681,14 @@ function App() {
           <div className="project-grid">
             <ProjectCard title="BrightTrack LMS" description="An LMS with student support monitoring - tracks academic performance, attendance, and wellness to identify at-risk students. Includes AI assistant and ML-based analytics." note="Project in Third-year Student. Built with Django, PostgreSQL, and integrated AI/ML features for student support." tags={['Python', 'Django', 'PostgreSQL', 'ML']} url="https://brighttrack.onrender.com/" />
             <ProjectCard title="JobAI - AI-Powered Job Platform" description="Full-stack job platform connecting employers and job seekers with an AI-powered admin chat assistant. Separate portals for employers, seekers, and admins." note="Project in Second-year Student. Built with Laravel, MySQL, and integrated AI features for admin support." tags={['PHP (Laravel)', 'JavaScript', 'MySQL', 'AI']} url="https://jobai-1-7c66.onrender.com/#" />
-            <ProjectCard title="AI-Based Hazard Detection System" badge="Personal Project" description="A Django web app that uses Google Gemini AI to analyze construction site images for safety hazards and automatically notify engineers via email. Features camera capture, image upload, severity rating, and report history." tags={['Python', 'Django', 'Gemini AI']} url="https://ai-based-hazard-detection-system.onrender.com" />
+            <ProjectCard title="HAZORA - Construction Safety Platform" badge="Personal Project" description="Web dashboard for authorized teams to monitor ESP32-CAM feeds, review AI-flagged PPE incidents, view safety analytics, and export reports. Role-based access helps site and head-office staff use features relevant to their responsibilities." note="Web stack: React, Vite, Firebase, Python, FastAPI, computer vision, and ESP32-CAM." tags={['React', 'Vite', 'Firebase', 'Python', 'FastAPI', 'Computer Vision', 'ESP32-CAM']} links={[{ url: 'http://127.0.0.1:5173', label: 'Local Demo', note: '(localhost only)' }]} />
           </div>
           <hr />
           <h3 className="category-title"><Smartphone size={18} /> Mobile</h3>
           <div className="project-grid">
             <ProjectCard title="Study-Sync" description="Android app for students to manage study workflow - task management, analytics dashboard, AR flashcards, and quiz generation from modules." note="Project in Third-year Student. Built with Java, Android Studio, and Firebase for backend services." tags={['Java', 'Android Studio', 'Firebase', 'Firestore']} />
             <ProjectCard title="Recipe Mobile App" description="Mobile app where users post recipes with images and captions. Firebase-backed with user profiles, likes, and image uploads." note="Project in Second-year Student. Built with Java, Android Studio, and Firebase for backend services." tags={['Java', 'Firebase', 'Android Studio']} />
+            <ProjectCard title="HAZORA Mobile" description="Implemented a multi-frame scan flow that analyzes up to three camera frames and combines results. Runs on-device TensorFlow Lite inference with YOLOv8 PPE detection for helmets, vests, and shoes, alongside SSD MobileNet person detection." tags={['Java', 'Android', 'CameraX', 'TensorFlow Lite', 'YOLOv8', 'SSD MobileNet', 'Firebase']} links={[{ url: 'https://github.com/lckdxx/HAZORA-Mobile/tree/UPDATED-AIUI', label: 'Android App Repository' }]} />
           </div>
         </Section>
 

@@ -37,6 +37,7 @@ if exist "%ARCHIVE_NAME%" del "%ARCHIVE_NAME%"
 tar ^
   --exclude="./.git" ^
   --exclude="./.agents" ^
+  --exclude="./.env" ^
   --exclude="./node_modules" ^
   --exclude="./vendor" ^
   --exclude="./storage/logs/*" ^
@@ -91,6 +92,6 @@ echo ===============================================
 echo DEPLOYMENT FINISHED
 echo ===============================================
 echo.
-echo Website: http://13.250.47.185
+echo Website: http://13.250.47.185:8080
 echo.
 pause

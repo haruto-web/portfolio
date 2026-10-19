@@ -6,7 +6,7 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -15,61 +15,48 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<< /Length 4328 >>
+<< /Length 4469 >>
 stream
-0.08 0.13 0.22 rg 0 700 595 142 re f
-1 1 1 rg BT /F2 22 Tf 1 0 0 1 50 790 Tm (VEN ANDREW B. MIRASOL) Tj ET
-0.72 0.84 0.96 rg BT /F1 10 Tf 1 0 0 1 52 766 Tm (MOBILE & WEB DEVELOPER  |  BSIT STUDENT) Tj ET
-1 1 1 rg BT /F1 9 Tf 1 0 0 1 52 733 Tm (venandrewmirasol@gmail.com  |  +63 992 149 7659  |  github.com/haruto-web) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 50 668 Tm (ABOUT ME) Tj ET
-0.78 0.82 0.87 RG 0.7 w 50 659 m 545 659 l S
-0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 50 641 Tm (BSIT student and developer focused on building practical mobile and web) Tj ET
-0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 50 627 Tm (applications. Experienced with Android development, Firebase-backed apps,) Tj ET
-0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 50 613 Tm (and full-stack projects using Laravel, Django, React, and relational databases.) Tj ET
-0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 50 599 Tm (Proficient with VS Code and quick to adapt to current technologies.) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 50 574 Tm (SKILLS) Tj ET
-0.78 0.82 0.87 RG 0.7 w 50 565 m 190 565 l S
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 547 Tm (PROGRAMMING) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 533 Tm (Java, Python, PHP,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 521 Tm (JavaScript, SQL) Tj ET
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 495 Tm (FRAMEWORKS) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 481 Tm (Firebase, Laravel,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 469 Tm (Django, React, AI/ML) Tj ET
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 443 Tm (TOOLS & DATABASES) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 429 Tm (Android Studio, VS Code,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 417 Tm (Git, GitHub, MySQL,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 405 Tm (PostgreSQL, Firestore) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 50 291 Tm (EDUCATION) Tj ET
-0.78 0.82 0.87 RG 0.7 w 50 282 m 190 282 l S
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 264 Tm (BACHELOR OF SCIENCE) Tj ET
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 50 252 Tm (IN INFORMATION TECHNOLOGY) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 50 236 Tm (Currently Enrolled) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 218 Tm (Mobile development, web) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 50 206 Tm (technologies, databases) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 225 574 Tm (EDUCATION & PROJECT EXPERIENCE) Tj ET
-0.78 0.82 0.87 RG 0.7 w 225 565 m 545 565 l S
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 547 Tm (BSIT STUDENT) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 533 Tm (Currently Enrolled) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 517 Tm (- Focused on mobile app development, web) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 505 Tm (  technologies, databases, and project-based learning.) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 489 Tm (- Built systems such as BrightTrack LMS,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 477 Tm (  JobAI, AI hazard detection, and mobile apps.) Tj ET
-0.12 0.16 0.22 rg BT /F2 10 Tf 1 0 0 1 225 451 Tm (PROJECTS BUILT) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 437 Tm (Django  |  PostgreSQL  |  AI/ML) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 421 Tm (- Learning management system with AI support,) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 409 Tm (  analytics, performance, and wellness tracking.) Tj ET
-0.38 0.43 0.50 rg BT /F1 9 Tf 1 0 0 1 225 393 Tm (Laravel  |  MySQL  |  JavaScript  |  AI) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 377 Tm (- Full-stack job platform for employers and job seekers) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 225 365 Tm (  with an AI admin assistant.) Tj ET
-0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 225 194 Tm (CONTACT) Tj ET
-0.78 0.82 0.87 RG 0.7 w 225 185 m 545 185 l S
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 225 167 Tm (Email) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 275 167 Tm (venandrewmirasol@gmail.com) Tj ET
-0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 225 151 Tm (GitHub) Tj ET
-0.12 0.16 0.22 rg BT /F1 9 Tf 1 0 0 1 275 151 Tm (github.com/haruto-web) Tj ET
-0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 225 116 Tm (Proficient with VS Code and modern development tools) Tj ET
-0.08 0.37 0.65 rg 50 83 495 2 re f
-BT 0.38 0.43 0.50 rg /F1 8 Tf 1 0 0 1 50 64 Tm (Ven Andrew B. Mirasol  |  Mobile & Web Developer) Tj ET
+0.08 0.13 0.22 rg BT /F2 20 Tf 1 0 0 1 54 750 Tm (VEN ANDREW B. MIRASOL) Tj ET
+0.08 0.37 0.65 rg BT /F2 10 Tf 1 0 0 1 54 725 Tm (MOBILE & WEB DEVELOPER) Tj ET
+0.25 0.29 0.34 rg BT /F1 9 Tf 1 0 0 1 54 709 Tm (venandrewmirasol@gmail.com | +63 992 149 7659 | github.com/haruto-web) Tj ET
+0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 54 689 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.78 0.82 0.87 RG 0.7 w 54 684 m 558 684 l S
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 670 Tm (Fourth-year BSIT student at the Technological Institute of the Philippines with project experience) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 657 Tm (building web applications, database-backed features, and AI-enabled applications. Contributed to a) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 644 Tm (Django learning platform, a Laravel job platform, and an Android PPE detection app using on-device) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 631 Tm (computer vision.) Tj ET
+0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 54 615 Tm (TECHNICAL SKILLS) Tj ET
+0.78 0.82 0.87 RG 0.7 w 54 610 m 558 610 l S
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 596 Tm (Languages: Python, PHP, JavaScript, SQL) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 580 Tm (Frameworks & build tools: Django, Laravel, React, FastAPI, Vite) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 564 Tm (AI/ML: Computer vision; YOLOv8 and TensorFlow Lite PPE detection; SSD MobileNet person detection) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 548 Tm (Databases: PostgreSQL, MySQL, Firebase / Firestore) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 532 Tm (Developer tools: Git, GitHub, Visual Studio Code, Amazon Q, Kiro, Microsoft Agent, Codex) Tj ET
+0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 54 516 Tm (SELECTED SOFTWARE DEVELOPMENT PROJECTS) Tj ET
+0.78 0.82 0.87 RG 0.7 w 54 511 m 558 511 l S
+0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 54 497 Tm (BrightTrack LMS | Python, Django, PostgreSQL, AI/ML) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 484 Tm (Contributed to web development and database integration for a learning platform with learning) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 471 Tm (analytics, academic performance tracking, and wellness monitoring.) Tj ET
+0.25 0.29 0.34 rg BT /F1 8 Tf 1 0 0 1 66 455 Tm (Demo: https://brighttrack.onrender.com/ \(static preview\)) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 54 443 Tm (JobAI | PHP, Laravel, JavaScript, MySQL, AI assistant) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 430 Tm (Developed application features for a full-stack platform connecting employers and job seekers) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 417 Tm (through separate portals, with an AI-powered administrative assistant, using Laravel, MySQL, and) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 404 Tm (JavaScript.) Tj ET
+0.25 0.29 0.34 rg BT /F1 8 Tf 1 0 0 1 66 388 Tm (Demo: https://jobai-1-7c66.onrender.com/ \(static preview\)) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 54 376 Tm (HAZORA | Web dashboard: React, Vite, Firebase, Python, FastAPI, Computer Vision) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 363 Tm (Construction-safety dashboard for authorized teams to monitor ESP32-CAM feeds, review AI-flagged) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 350 Tm (PPE incidents, view safety analytics, and export reports. Role-based access supports site and) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 337 Tm (head-office staff.) Tj ET
+0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 54 321 Tm (HAZORA Mobile | Java, Android, CameraX, TensorFlow Lite, YOLOv8, SSD MobileNet) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 308 Tm (Implemented a multi-frame scan flow that analyzes up to three camera frames and combines results.) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 295 Tm (Runs on-device TensorFlow Lite inference with YOLOv8 PPE detection for helmets, vests, and shoes,) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 282 Tm (alongside SSD MobileNet person detection.) Tj ET
+0.25 0.29 0.34 rg BT /F1 8 Tf 1 0 0 1 66 266 Tm (Android app repository: https://github.com/lckdxx/HAZORA-Mobile/tree/UPDATED-AIUI) Tj ET
+0.08 0.37 0.65 rg BT /F2 11 Tf 1 0 0 1 54 254 Tm (EDUCATION) Tj ET
+0.78 0.82 0.87 RG 0.7 w 54 249 m 558 249 l S
+0.12 0.16 0.22 rg BT /F2 9 Tf 1 0 0 1 54 235 Tm (Bachelor of Science in Information Technology | Technological Institute of the Philippines) Tj ET
+0.12 0.16 0.22 rg BT /F1 10 Tf 1 0 0 1 54 222 Tm (Fourth-year student) Tj ET
 
 endstream
 endobj
@@ -85,5 +72,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-4776
+4917
 %%EOF

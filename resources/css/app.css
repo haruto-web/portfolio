@@ -356,6 +356,17 @@ h2 {
   transition: background 0.2s ease;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.project-links .demo-link {
+  margin-top: 0;
+}
+
 .demo-link:hover {
   background: #374151;
 }
