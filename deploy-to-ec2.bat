@@ -22,6 +22,7 @@ if not exist "%PEM_KEY%" (
 )
 
 echo [STEP 1/5] Building Vite assets...
+if exist "public\hot" del "public\hot"
 call npm run build
 if errorlevel 1 (
     echo ERROR: Build failed
@@ -37,6 +38,7 @@ if exist "%ARCHIVE_NAME%" del "%ARCHIVE_NAME%"
 tar ^
   --exclude="./.git" ^
   --exclude="./.agents" ^
+  --exclude="./public/hot" ^
   --exclude="./.env" ^
   --exclude="./node_modules" ^
   --exclude="./vendor" ^
@@ -76,7 +78,7 @@ echo Upload complete
 
 echo.
 echo [STEP 5/5] Extracting and refreshing Laravel on EC2...
-ssh -i "%PEM_KEY%" %EC2_USER%@%EC2_HOST% "sudo chown -R %EC2_USER%:%EC2_USER% %REMOTE_PATH% && cd %REMOTE_PATH% && tar -xzf /tmp/%ARCHIVE_NAME% && rm -f /tmp/%ARCHIVE_NAME% && composer install --no-dev --optimize-autoloader && test -f .env || (cp .env.example .env && php artisan key:generate --force) && mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache && php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan cache:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache && sudo chown -R apache:apache storage bootstrap/cache && sudo systemctl restart php-fpm && sudo systemctl restart nginx"
+ssh -i "%PEM_KEY%" %EC2_USER%@%EC2_HOST% "sudo chown -R %EC2_USER%:%EC2_USER% %REMOTE_PATH% && cd %REMOTE_PATH% && rm -f public/hot && tar -xzf /tmp/%ARCHIVE_NAME% && rm -f /tmp/%ARCHIVE_NAME% && composer install --no-dev --optimize-autoloader && test -f .env || (cp .env.example .env && php artisan key:generate --force) && mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache && php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan cache:clear && php artisan config:cache && php artisan route:cache && php artisan view:cache && sudo chown -R apache:apache storage bootstrap/cache && sudo systemctl restart php-fpm && sudo systemctl restart nginx"
 
 if errorlevel 1 (
     echo WARNING: Deployment uploaded, but one or more EC2 commands failed.
