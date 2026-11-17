@@ -387,7 +387,6 @@ function GitHubActivity() {
       cache: 'no-store',
       headers: {
         Accept: 'application/vnd.github+json',
-        'Cache-Control': 'no-cache',
       },
       signal: controller.signal,
     })
@@ -414,7 +413,6 @@ function GitHubActivity() {
       cache: 'no-store',
       headers: {
         Accept: 'application/vnd.github+json',
-        'Cache-Control': 'no-cache',
       },
       signal: controller.signal,
     })
